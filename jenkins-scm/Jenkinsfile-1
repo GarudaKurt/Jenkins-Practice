@@ -4,7 +4,7 @@ pipeline {
         stage('input') {
             agent any
             input {
-                message: "What is your first commit"
+                message "What is your first commit?"
                 ok "Submit"
                 parameters {
                     string(defaultValue: 'Dave', name: 'FIRST_NAME', trim: true)
