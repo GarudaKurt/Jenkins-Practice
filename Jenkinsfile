@@ -1,14 +1,14 @@
 pipeline {
-    agent {label: "Linux"}
+    agent {label: "linux"}; 
     options {
         buildDiscarder  logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '5',
         daystoKeepStr: '', numToKeepStr: '5')
-        disabledConcurrentBuild()
+        disableConcurrentBuilds()
     }
     stages {
         stage('Hello') {
             steps {
-                echo 'Hello'
+                echo "hello"
             }
         }
     }
