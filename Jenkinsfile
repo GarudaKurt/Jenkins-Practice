@@ -11,8 +11,6 @@ pipeline {
                 echo "hello"
             }
         }
-<<<<<<< Updated upstream
-=======
         stage('cat README') {
             when {
                 branch "fix-*"
@@ -51,6 +49,5 @@ pipeline {
                 echo "build step placeholder"
             '''
         }
->>>>>>> Stashed changes
     }
 }
