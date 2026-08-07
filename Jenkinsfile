@@ -27,13 +27,14 @@ pipeline {
             }
             steps {
                 echo "Building on main..."
+                sh '''
+                    # replace with your actual build command, e.g.:
+                    # mvn clean package
+                    # npm install && npm run build
+                    echo "build step placeholder"
+                '''
             }
-            sh '''
-                # replace with your actual build command, e.g.:
-                # mvn clean package
-                # npm install && npm run build
-                echo "build step placeholder"
-            '''
+ 
         }
         stage('Test') {
             when {
@@ -41,13 +42,14 @@ pipeline {
             }
             steps{
                 echo "Testing main branch.."
+                echo '''
+                    # replace with your actual build command, e.g.:
+                    # mvn clean package
+                    # npm install && npm run build
+                    echo "build step placeholder"
+                '''
             }
-            echo '''
-                # replace with your actual build command, e.g.:
-                # mvn clean package
-                # npm install && npm run build
-                echo "build step placeholder"
-            '''
+
         }
     }
 }
